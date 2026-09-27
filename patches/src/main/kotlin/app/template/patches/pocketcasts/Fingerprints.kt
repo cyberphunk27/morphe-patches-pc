@@ -4,7 +4,7 @@ import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.fieldAccess
 import com.android.tools.smali.dexlib2.AccessFlags
 
-// Verified against Pocket Casts 8.20 (versionCode 9452).
+// Verified against Pocket Casts 8.20 (versionCode 9452)..
 
 private const val SUBSCRIPTION_TIER = "Lau/com/shiftyjelly/pocketcasts/payment/SubscriptionTier;"
 
