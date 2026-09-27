@@ -10,7 +10,7 @@ import com.android.tools.smali.dexlib2.iface.instruction.NarrowLiteralInstructio
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 
-// Verified against Pocket Casts 8.16 (versionCode 9441). See Fingerprints.kt
+// Verified against Pocket Casts 8.20 (versionCode 9452). See Fingerprints.kt
 // for the reasoning behind each match strategy and which identifiers are
 // obfuscated.
 @Suppress("unused")
