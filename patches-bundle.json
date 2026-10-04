@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-10-04T18:12:37",
-  "description": "## [1.0.1](https://github.com/cyberphunk27/morphe-patches-pc/compare/v1.0.0...v1.0.1) (2026-10-04)\n\n### 🐛 Bug Fixes\n\n* update Aviate to 1.4.2 ([d016a31](https://github.com/cyberphunk27/morphe-patches-pc/commit/d016a310a51f09f9f66428d4f366a2f0f1b41bf9))",
-  "download_url": "https://github.com/cyberphunk27/morphe-patches-pc/releases/download/v1.0.1/patches-1.0.1.mpp",
+  "created_at": "2026-10-04T18:27:49",
+  "description": "## [1.0.2](https://github.com/cyberphunk27/morphe-patches-pc/compare/v1.0.1...v1.0.2) (2026-10-04)\n\n### 🐛 Bug Fixes\n\n* update Aviate to 1.4.2 ([d0f372e](https://github.com/cyberphunk27/morphe-patches-pc/commit/d0f372eefaa8660752a5da704b8e04e696c4e942))",
+  "download_url": "https://github.com/cyberphunk27/morphe-patches-pc/releases/download/v1.0.2/patches-1.0.2.mpp",
   "signature_download_url": "",
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
