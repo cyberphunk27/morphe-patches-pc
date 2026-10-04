@@ -203,7 +203,7 @@ val AVIATE_COMPATIBILITY = Compatibility(
         packageName = "me.highest.aviate",
         apkFileType = ApkFileType.APKS,
         appIconColor = 0x1A73E8,
-        targets = listOf(AppTarget(version = "1.1.0-beta.1", versionCode = 202))
+        targets = listOf(AppTarget(version = "1.4.2", versionCode = 219))
     )
 
 val AWAKE_COMPATIBILITY = Compatibility(

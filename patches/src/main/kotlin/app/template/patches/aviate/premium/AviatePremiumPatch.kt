@@ -43,6 +43,10 @@ import app.template.patches.shared.Constants.AVIATE_COMPATIBILITY
  * Version history:
  *   v1.0.1 (versionCode=201): fn #6699, #7657, #7659, #15648 (old offsets)
  *   v1.1.0-beta.1 (versionCode=202): fn #6791, #7761, #7763, #15987 (current)
+ *   v1.4.2 (versionCode=219): fn #16932, #23615, #7483 — see AviatePremiumPatch_142.kt
+ *     and INSTRUCTIONS_142.md. The 1.1.0 patterns below DO NOT exist in 1.4.2;
+ *     the subscription module was restructured (useState initializer is now
+ *     hydrateSubscriptionData fn #7811, which returns a full snapshot object).
  */
 
 
