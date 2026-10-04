@@ -85,39 +85,39 @@ val aviatePremiumPatch = rawResourcePatch(
     compatibleWith(AVIATE_COMPATIBILITY)
 
     dependsOn(aviateLicensePatch , hermesPatch {
-        // 1. SubscriptionProvider isPro useState seed (fn #7763, offset 0x004ee9ae +0x4d):
-        //    LoadConstFalse r2 (96 02) is the false seed for isPro.
-        //    Flip to LoadConstTrue r2 (95 02) so isPro=true from first render.
-        //    Window: 96 02 6e 0a 08 01 02 3b — unique (1 occurrence).
-        val subscriptionProviderInit =
-            "96 02 6E 0A 08 01 02 3B" to
-            "95 02 6E 0A 08 01 02 3B"
+        // ===== Aviate 1.4.2 (versionCode=219, HBC v98, instOffset=0x427424) =====
+        // Every pattern verified to appear EXACTLY ONCE in the 1.4.2 bundle and
+        // every replacement is byte-length-preserving. Offsets refer to the file
+        // layout in aviate-1.4.2/extracted/assets/index.android.bundle.
 
-        // 2. State-update callback no-op (fn #15987, offset 0x00622370):
-        //    This closure is invoked with the API response and calls setSubscription,
-        //    setGrandfathered, setIsAdmin — overwriting our seeded isPro=true.
-        //    Replace first 4 bytes with 93 00 76 00 (return undefined immediately).
-        //    Window: 34 04 00 89 01 01 3b 03 — unique (1 occurrence).
+        // 1. Hydration / refresh callback no-op (closure fn #16932 @ 0x6f3c3c).
+        //    In 1.4.2 the SubscriptionProvider useState initializer is
+        //    hydrateSubscriptionData (fn #7811), which returns a whole entitlement
+        //    snapshot object — there is no single LoadConstFalse seed to flip.
+        //    Instead we no-op the callback that recomputes and STORES the
+        //    entitlement, so the pro state is never overwritten with a "free"
+        //    snapshot. This is the 1.1.0 analogue of the fn #15987 no-op.
+        //    Replace first 4 bytes with 93 00 76 00 (LoadConstUndefined r0, Ret r0).
         val refreshCallbackNoop =
-            "34 04 00 89 01 01 3B 03" to
-            "93 00 76 00 89 01 01 3B"
+            "89 04 02 93 00 D5 06 04 00 04 04 34" to
+            "93 00 76 00 00 D5 06 04 00 04 04 34"
 
-        // 3. computeIsPro return true (fn #7761, offset 0x004ee8ea):
-        //    Checks subscription=="free" and subscription_expiry date.
-        //    Replace first 4 bytes with 95 00 76 00 (LoadConstTrue r0, Ret r0).
-        //    Window extended to 12 bytes for uniqueness (8-byte pattern has 2 hits).
+        // 2. effectiveNativeAccess selector -> true (closure fn #23615 @ 0x79e8c5).
+        //    1.4.2 analogue of computeIsPro: the selector every Pro consumer
+        //    reads through useSubscription() / useProEntitlement(). The whole
+        //    42-byte body is required for uniqueness (the first 4 bytes alone
+        //    appear 474 times). Replace first 4 bytes with 95 00 76 00
+        //    (LoadConstTrue r0, Ret r0).
         val computeIsPro =
-            "89 01 01 45 02 01 00 D1 B1 90 03 0E" to
-            "95 00 76 00 02 01 00 D1 B1 90 03 0E"
+            "34 03 01 3B 02 03 09 93 00 6C 02 02 00 34 04 00 3B 04 04 01 6E 04 04 00 02 3B 03 03 0A 45 02 02 00 1F E2 6E 01 03 00 02 76 00" to
+            "95 00 76 00 02 03 09 93 00 6C 02 02 00 34 04 00 3B 04 04 01 6E 04 04 00 02 3B 03 03 0A 45 02 02 00 1F E2 6E 01 03 00 02 76 00"
 
-        // 4. isProUser return true (fn #6791, offset 0x004c885e):
-        //    Reads offline_subscription_state from AsyncStorage (widget / native path).
-        //    Replace first 4 bytes with 95 00 76 00 (LoadConstTrue r0, Ret r0).
-        //    Window: 93 03 93 00 89 05 01 45 — unique (1 occurrence).
+        // 3. isProUser -> true (fn #7483 @ 0x5784e3; offline AsyncStorage path —
+        //    widget / native bridge). Replace first 4 bytes with 95 00 76 00.
         val isProUser =
-            "93 03 93 00 89 05 01 45" to
-            "95 00 76 00 89 05 01 45"
+            "93 03 93 06 93 00 93 01" to
+            "95 00 76 00 93 00 93 01"
 
-        setOf(subscriptionProviderInit, refreshCallbackNoop, computeIsPro, isProUser)
+        setOf(refreshCallbackNoop, computeIsPro, isProUser)
     })
 }
