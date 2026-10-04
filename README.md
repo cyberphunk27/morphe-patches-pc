@@ -93,7 +93,7 @@ Bug reports must include:
 ## 🩹 Patches list
 
 <!-- PATCHES_START -->
-> **[v1.0.0](https://github.com/cyberphunk27/morphe-patches-pc/releases/tag/v1.0.0)**&nbsp;&nbsp;&middot;&nbsp;&nbsp;`main`&nbsp;&nbsp;&middot;&nbsp;&nbsp;**318 patches** across **228 apps**&nbsp;&nbsp;&middot;&nbsp;&nbsp;[Full details](PATCHES.md)
+> **[v1.0.1](https://github.com/cyberphunk27/morphe-patches-pc/releases/tag/v1.0.1)**&nbsp;&nbsp;&middot;&nbsp;&nbsp;`main`&nbsp;&nbsp;&middot;&nbsp;&nbsp;**318 patches** across **228 apps**&nbsp;&nbsp;&middot;&nbsp;&nbsp;[Full details](PATCHES.md)
 
 | # | App | Patches | Version | Package |
 |---|---|---|---|---|
@@ -123,7 +123,7 @@ Bug reports must include:
 | 24 | [**Athena**](PATCHES.md#athena-comkinathena) | 1 | `1.80` | [`com.kin.athena`](https://play.google.com/store/apps/details?id=com.kin.athena) |
 | 25 | [**Auto Cursor**](PATCHES.md#auto-cursor-eutoneivcursor) | 1 | `1.11.1` | [`eu.toneiv.cursor`](https://play.google.com/store/apps/details?id=eu.toneiv.cursor) |
 | 26 | [**Automate**](PATCHES.md#automate-comllamalabautomate) | 1 | `1.53.2` | [`com.llamalab.automate`](https://play.google.com/store/apps/details?id=com.llamalab.automate) |
-| 27 | [**Aviate**](PATCHES.md#aviate-mehighestaviate) | 1 | `1.1.0-beta.1` | [`me.highest.aviate`](https://play.google.com/store/apps/details?id=me.highest.aviate) |
+| 27 | [**Aviate**](PATCHES.md#aviate-mehighestaviate) | 1 | `1.4.2` | [`me.highest.aviate`](https://play.google.com/store/apps/details?id=me.highest.aviate) |
 | 28 | [**Awake**](PATCHES.md#awake-commkawake) | 1 | `1.10.3` | [`com.mk.awake`](https://play.google.com/store/apps/details?id=com.mk.awake) |
 | 29 | [**Battery Guru**](PATCHES.md#battery-guru-compaget96batteryguru) | 1 | `2.5.0.8` | [`com.paget96.batteryguru`](https://play.google.com/store/apps/details?id=com.paget96.batteryguru) |
 | 30 | [**BatteryPods**](PATCHES.md#batterypods-comsumyapplicationsbluetoothearphone) | 1 | `7.52` | [`com.sumyapplications.bluetooth.earphone`](https://play.google.com/store/apps/details?id=com.sumyapplications.bluetooth.earphone) |

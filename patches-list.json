@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "patches": [
     {
       "name": "AAAD Premium",
@@ -7732,12 +7732,12 @@
           "signatures": null,
           "targets": [
             {
-              "version": "1.1.0-beta.1",
+              "version": "1.4.2",
               "versionCodes": {
-                "ARM64_V8A": 202,
-                "ARMEABI_V7A": 202,
-                "X86_64": 202,
-                "X86": 202
+                "ARM64_V8A": 219,
+                "ARMEABI_V7A": 219,
+                "X86_64": 219,
+                "X86": 219
               },
               "isExperimental": false,
               "minSdk": null,

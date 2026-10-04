@@ -1,3 +1,9 @@
+## [1.0.1](https://github.com/cyberphunk27/morphe-patches-pc/compare/v1.0.0...v1.0.1) (2026-10-04)
+
+### 🐛 Bug Fixes
+
+* update Aviate to 1.4.2 ([d016a31](https://github.com/cyberphunk27/morphe-patches-pc/commit/d016a310a51f09f9f66428d4f366a2f0f1b41bf9))
+
 ## 1.0.0 (2026-09-27)
 
 ### 🐛 Bug Fixes
