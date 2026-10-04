@@ -1,6 +1,6 @@
 # Patches
 
-> Generated from `patches-list.json` — **v1.0.0** (`main`) · **318 patches** across **228 apps** · back to [README](README.md)
+> Generated from `patches-list.json` — **v1.0.1** (`main`) · **318 patches** across **228 apps** · back to [README](README.md)
 
 ---
 
@@ -283,7 +283,7 @@
 
 ## Aviate (me.highest.aviate)
 
-**Supported versions:** `1.1.0-beta.1`
+**Supported versions:** `1.4.2`
 
 | Patch | Details |
 |---|---|
